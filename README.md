@@ -22,6 +22,13 @@ Currently the list of micropython enabled **VK** boards is as follows :
     >>> import Test
     >>> Test.TFT()
     ```
+- **CAMDisplay >** this Lib tests LCD & CAM modules of uPy VK-RA6M3 board:
+  - **DEMO** (expects OV7725 cam and paralel RGB display to be connected on M3 board)
+    - Once started this DEMO captures the `camera video` and display it on the LCD screen. Touching the eye icon you can change between several camera effects.
+- **FlashDirList >** this Lib tests network module of uPy VK-RA6M5 board:
+  - **DEMO** (expects LAN cable to be plugged in M5 board)
+    - Once started this DEMO starts web server and performs `directory list` function on the content of the internal flash of the board
+  
 ### Drv
 - **ssd1306 >** murcopython OLED driver (works with devices based on that particular controller, such as [SBC-OLED01](https://www.joy-it.net/en/products/SBC-OLED01))
 - **st7789 >** micropython TFT driver (works with devices based on that particular controller, such as [SBC-LCD01](https://www.joy-it.net/en/products/SBC-LCD01))
