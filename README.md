@@ -22,6 +22,12 @@ Currently the list of micropython enabled **VK** boards is as follows :
     >>> import Test
     >>> Test.TFT()
     ```
+- **Lvg >** this Lib tests the LVGL module (expects SBC-LCD01 (SPI) or parallel (RGB) display to be connected):
+    - Once `pRGB.py`, `st77xx.py` & `lv_utils.py` are in **FS** of the board, you are ready ti run it like so:
+    ```python
+    >>> import Lvg
+    >>> Lvg.TST()
+    ```
 - **CAMDisplay >** this Lib tests LCD & CAM modules of uPy VK-RA6M3 board:
   - **DEMO** (expects OV7725 cam and paralel RGB display to be connected on M3 board)
     - Once started this DEMO captures the `camera video` and display it on the LCD screen. Touching the eye icon you can change between several camera effects.
@@ -32,3 +38,5 @@ Currently the list of micropython enabled **VK** boards is as follows :
 ### Drv
 - **ssd1306 >** murcopython OLED driver (works with devices based on that particular controller, such as [SBC-OLED01](https://www.joy-it.net/en/products/SBC-OLED01))
 - **st7789 >** micropython TFT driver (works with devices based on that particular controller, such as [SBC-LCD01](https://www.joy-it.net/en/products/SBC-LCD01))
+- **st77xx >** micropython TFT driver (LVGL)(works with devices based on SPI interface, such as [SBC-LCD01](https://www.joy-it.net/en/products/SBC-LCD01))
+- **pRGB >** micropython TFT driver (LVGL)(works with devices based on parallel interface, such as [RGB](https://www.buydisplay.com/ips-4-3-inch-480x272-tft-lcd-display-with-optl-capacitive-touch-screen))
