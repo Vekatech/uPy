@@ -17,17 +17,24 @@ Currently the list of micropython enabled **VK** boards is as follows :
     >>> Test.OLED()
     ```
   - **SPI** (expects slave to be connected on SCK, MOSI, & D7-D9 )
-    - Once `Test.py` & `st7789.py` are in **FS** of the board, you are ready ti run it like so:
+    - Once `Test.py` & `st7789.py` are in **FS** of the board, you are ready to run it like so:
     ```python
     >>> import Test
     >>> Test.TFT()
     ```
 - **Lvg >** this Lib tests the LVGL module (expects SBC-LCD01 (SPI) or parallel (RGB) display to be connected):
-    - Once `pRGB.py`, `st77xx.py` & `lv_utils.py` are in **FS** of the board, you are ready ti run it like so:
+    - Once `pRGB.py`, `st77xx.py` & `lv_utils.py` are in **FS** of the board, you are ready to run it like so:
     ```python
     >>> import Lvg
     >>> Lvg.TST()
     ```
+- **MB >** this Lib tests network module & RS485 of uPy VK boards:
+    - Once `gateway.py` is in **FS** of the board, you are ready to run it like so:
+    ```python
+    >>> import gateway
+    >>> gateway.ON() # or use gateway.ON(True) if you want see the data, passing through the gateway
+    ```
+    - Once started this `gateway.py` turns every uPy VK board in to a **Modbus TCP/RTU Gateway** deice which can support one TCP master and multiple RTU slaves (RS485).
 - **CAMDisplay >** this Lib tests LCD & CAM modules of uPy VK-RA6M3 board:
   - **DEMO** (expects OV7725 cam and paralel RGB display to be connected on M3 board)
     - Once started this DEMO captures the `camera video` and display it on the LCD screen. Touching the eye icon you can change between several camera effects.
