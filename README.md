@@ -34,14 +34,20 @@ Currently the list of micropython enabled **VK** boards is as follows :
     >>> import gateway
     >>> gateway.ON() # or use gateway.ON(True) if you want see the data, passing through the gateway
     ```
-    - Once started this `gateway.py` turns every uPy VK board in to a **Modbus TCP/RTU Gateway** deice which can support one TCP master and multiple RTU slaves (RS485).
+    - Once started this `gateway.py` turns every uPy VK board in to a **Modbus TCP/RTU Gateway** device which can support one TCP master and multiple RTU slaves (RS485).
 - **MBserv >** this Lib tests network module of uPy VK boards:
-    - Once `MBserv.py` & `umodbus` folder is in **FS** of the board, you are ready to run it like so:
+    - Once `MBserv.py` & `umodbus` folder are in **FS** of the board, you are ready to run it like so:
     ```python
     >>> import MBserv
     >>> MBserv.UP()
     ```
     - Once started this `MBserv.py` turns every uPy VK board in to a **Modbus TCP Server**. All available LEDs can be set and read as coils and all available BTNs can be read as discret inputs.
+- **GWserv >** this Lib tests network module of uPy VK boards:
+    - Once `GWserv.py`, `microdot` folder content & `Settings.json` are in **FS** of the board, you are ready to run it like so:
+    ```python
+    >>> import GWserv
+    ```
+    - Once started this `GWserv.py` turns every uPy VK board in to a **WEB + Modbus TCP/RTU Gateway** device. Gateway is configured through Settings.json file. WEB interface is under construction.
 - **CAMDisplay >** this Lib tests LCD & CAM modules of uPy VK-RA6M3 board:
   - **DEMO** (expects OV7725 cam and paralel RGB display to be connected on M3 board)
     - Once started this DEMO captures the `camera video` and display it on the LCD screen. Touching the eye icon you can change between several camera effects.

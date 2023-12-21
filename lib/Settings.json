@@ -1,0 +1,21 @@
+{
+    "ETH": {
+        "DHCP" : true,
+        "IP" : "192.168.2.80"
+    },
+    "GW": {
+        "port": 502,
+        "time_out": 1000,
+        "tty" : null,
+        "baud" : 9600,
+        "data" : 8,
+        "parity" : null,
+        "stop" : 1,
+        "DE" : null,
+        "log" : false
+    },
+    "MB": {
+        "addr": 22,
+        "port": 502,
+    }
+}

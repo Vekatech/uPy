@@ -61,7 +61,7 @@ if("VK-RA6M3" in BRD):
     }
 elif("VK-RA6M5" in BRD):
     LEDs = [Pin('LED_R', Pin.OUT), Pin('LED_G', Pin.OUT), Pin('LED_B', Pin.OUT)]
-    BTNs[Pin('P010', Pin.IN), Pin('P009', Pin.IN)]
+    BTNs = [Pin('P010', Pin.IN), Pin('P009', Pin.IN)]
 
     register_definitions = {
         "COILS": {
