@@ -32,16 +32,17 @@ Currently the list of micropython enabled **VK** boards is as follows :
     - Once `gateway.py` is in **FS** of the board, you are ready to run it like so:
     ```python
     >>> import gateway
-    >>> gateway.ON() # or use gateway.ON(True) if you want see the data, passing through the gateway
+    >>> gateway.ON() # or use gateway.ON(True) if you want see the data, passing through the gateway.
     ```
     - Once started this `gateway.py` turns every uPy VK board in to a **Modbus TCP/RTU Gateway** device which can support one TCP master and multiple RTU slaves (RS485).
 - **MBserv >** this Lib tests network module of uPy VK boards:
-    - Once `MBserv.py` & `umodbus` folder are in **FS** of the board, you are ready to run it like so:
+    - Once `MBserv.py`, `umodbus` folder & `Settings.json` are in **FS** of the board, you are ready to run it like so:
     ```python
     >>> import MBserv
-    >>> MBserv.UP()
+    >>> MBserv.UP() # or use MBserv.UP('<File_name>.json') if you want to start the server with non deffault settings (port and mac), you shuld put them in a json file.
     ```
     - Once started this `MBserv.py` turns every uPy VK board in to a **Modbus TCP Server**. All available LEDs can be set and read as coils and all available BTNs can be read as discret inputs.
+    DACs & digital outputs D[0-13] can be set as holding registers. Digital inputs D[0-13] can be read as input registers. You can also control D[0-13] to be input or output from 1 of the holding regs.
 - **GWserv >** this Lib tests network module of uPy VK boards:
     - Once `GWserv.py`, `microdot` folder content & `Settings.json` are in **FS** of the board, you are ready to run it like so:
     ```python

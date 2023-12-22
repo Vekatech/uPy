@@ -269,11 +269,11 @@ async def main(conf):
 
     if settings is not None:
         Eth = network.LAN()
+        Eth.config(mac=bytes.fromhex(settings['ETH']['MAC']))
         if settings["ETH"]["DHCP"]:
             print('Taking an IP ...')
         else:
             print('Static IP assignment not supported yet ... trying DHCP')
-
         Eth.active(True)
         settings["ETH"]["IP"] = Eth.ifconfig()[0]
         print('Got {} from DHCP'.format(Eth.ifconfig()[0]))
